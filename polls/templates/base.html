@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block title %}<title>Paris Vacation Rentals | Home</title> {% endblock %}
+
+{% block href %}<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+{% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% block meta %}<meta name="keywords" content="paris vacation rentals, apartments in paris to rent, holiday to paris, holiday homes in paris, vacation rental in paris, holiday rentals in paris" />
+<meta Name="Description" Content="Paris Vacation Rentals offers vacation rentals, holiday homes and holiday rentals in Paris. Call us at :+44 203 397 8610 to book Paris apartments."/>
+<meta property="og:title" content="Paris Vacation Rental"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.parisvacationrentals.co.uk"/>
+<meta property="og:image" content="http://www.parisvacationrentals.co.uk/static/img/log.png"/>
+<meta property="og:site_name" content="http://www.parisvacationrentals.co.uk/"/>
+<meta property="og:description"
+      content="If you are planning to travel to Paris for a holiday then Paris Vacation Rental is the right place for you to book a nice accommodation. Take your pick form a cosy studio apartment to an elegant two bedroom apartment. Call us Now for more details."/>
+
+<link rel="canonical" href="http://www.parisvacationrentals.co.uk/" />
+{% endblock %}
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+{% block src %}
+<script type="text/javascript" src="static/js/move-top.js"></script>
+<script type="text/javascript" src="static/js/easing.js"></script>
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+{% endblock %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10454814-21']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</head>
+
+    <body>
+    {% block body %}{% endblock %}
+    <div class="content-bottom-in">
+				<div class="container">
+					<ul class="social">
+						<li><a href="https://www.facebook.com/parisvacationrentals?ref=hl"><i> </i></a></li>						
+						<li><a href="https://www.pinterest.com/parisvacationre/"><i class="pinterest"> </i></a></li>
+						<li><a href="https://twitter.com/ParisVacationRe"><i class="twitter"> </i></a></li>
+						<li><a href="https://plus.google.com/111347468917841204326/posts"><i class="gmail"> </i></a></li>
+					</ul>
+				</div>
+			</div>
+		<!---->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top">
+					<div class="col-md-3 amet-sed">
+					<h4>Location</h4>
+					<p>Apartment 3 Seacon tower</p> 
+					<p>5 Hutching street</p>
+					<p>London</p>
+					<p>E14 8JX</p>
+					<p>United Kingdom</p>
+					<a href="https://www.google.co.in/maps/place/Seacon+Tower+Serviced+Apartments/@51.499246,-0.026541,17z/data=!3m1!4b1!4m2!3m1!1s0x487602c6ce25d4f3:0xa8234cd08cd0ce86" >see it in the map<i> </i></a>
+					</div>
+					<div class="col-md-3 amet-sed ">
+					<h4>Company</h4>
+					
+						<ul class="nav-bottom">
+							<li><a href="story.html">About Us</a> </li>
+							
+							<li><a href="single.html">Articles </a></li>	
+														
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>Support</h4>
+						<ul  class="nav-bottom">		
+							<li><a href="contact.html">Contact us</a></li>							
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>Paris Vacation Rentals</h4>
+						<p>Experience Paris in style.</p>
+						<p class="footer-class">Copyright © 2015 </p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			 <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block body %}
+<!--header -->
+	<div class="header">
+		<div class="container">	
+			<div class="logo">
+				<a href="index.html"><img src="static/img/log.png" alt="Paris Vacation Rentals"></a>
+			</div>
+				<div class="top-nav">
+					<span class="menu"><img src="static/img/menu.png" alt="Menu" > </span>
+					<ul>
+						<li><a href="wheretostay.html" >Where to stay</a></li>
+						<li><a href="story.html" > About us</a></li>						
+<!--  		            <li><a href="specialoffers.html" > Special Offers  </a></li>                -->      
+						<li><a href="articles.html" > Articles </a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> 
+		
+		<div class="banner">
+			<div class="container">	
+				<h1>Welcome to Paris Vacation Rentals</h1>
+				<p>Experience Paris in style</p>
+				<a href="parisguide.html" class="here"> PARIS GUIDE<i> </i></a>
+			</div>
+			<div class="container">
+			<div class="indexform" >
+			    <form method="post" action=/index >
+			    {% csrf_token %}
+			    {{ form.non_field_errors }}
+			    {% for field in form %}
+		        {{ field.errors }}
+		        {{ field }}
+				{% endfor %}				
+				<input type="submit" class="here" value="Send Enquiry">
+				</form>
+            </div>
+            </div>
+		</div>
+		<!---->
+		<div class="content">
+			<div class="container">
+				<div class=" content-top">
+						<div class="col-md-4 top-grid">
+							<img class="img-responsive" src="static/img/s1.jpg" alt=" ">
+							<h5>Paris Vacation Rentals</h5>
+							<p>Located in some of the most prestigious areas with proximity to everything you need around, our apartments offer guests comfort that is unmatched.</p>
+						</div>
+						<div class="col-md-4 top-grid">
+							<img class="img-responsive" src="static/img/s2.png" alt=" ">
+							<h5>Comfortable Accommodations</h5>
+							<p>We aim to offer you an authentic Parisian experience. Combining elegance and comfort, our apartments exude style and are well equipped with all the contemporary facilities.</p>
+						</div>
+						<div class="col-md-4 top-grid">
+							<img class="img-responsive" src="static/img/s3.jpg" alt=" ">
+							<h5>Affordable Prices</h5>
+							<p>We offer a wide range of serviced apartments in numerous parts of Paris. With incomparable prices, you stay in your dream place without burning a hole in your pocket.</p>
+						</div>		
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!---->
+				</div>				
+			
+			<!-- container -->
+			<div class="container">
+				<div class="content-bottom">
+				<h3>Quick Links</h3>
+					<div class="brand">
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick1url }}"><img class="img-responsive" src="{{ quicklinks.Iquick1_image }}" alt="">
+							<p>{{ quicklinks.Iquick1_title }}<i> </i></p></a>
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick2url }}"><img class="img-responsive" src="{{ quicklinks.Iquick2_image }}" alt="">
+							<p>{{ quicklinks.Iquick2_title }}<i> </i></p></a>
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick3url }}"><img class="img-responsive" src="{{ quicklinks.Iquick3_image }}" alt="">
+							<p>{{ quicklinks.Iquick3_title }}<i> </i></p></a>
+							
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick4url }}"><img class="img-responsive" src="{{ quicklinks.Iquick4_image }}" alt="" width="300" height="340">
+							<p>{{ quicklinks.Iquick4_title }}<i> </i></p></a>
+						</div>
+							<div class="clearfix"> </div>
+						</div>
+				
+				</div>
+			</div>
+			{% endblock %}

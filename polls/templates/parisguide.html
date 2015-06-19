@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}<title>Paris Guide</title>{% endblock %}
+{% block meta %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="paris vacation rentals, apartments in paris to rent, holiday to paris, holiday homes in paris, vacation rental in paris, holiday rentals in paris"/>
+<meta name="description" content="Get what to do in Paris during your trip to Paris. Book paris vacation rentals with us." />
+<link rel="canonical" href="http://www.parisvacationrentals.co.uk/parisguide.html" />
+{% endblock %}
+{% block body %}
+	<div class="header">
+		<div class="container">	
+			<div class="logo">
+				<a href="index.html"><img src="static/img/log.png" alt="Paris Vacation Rentals"></a>
+			</div>
+				<div class="top-nav">
+					<span class="menu"><img src="static/img/menu.png" alt="Menu" ></span>
+					<ul>
+						<li><a href="wheretostay.html">Where to stay</a></li>
+						<li><a href="story.html" > About us</a></li>
+			<!--  		<li><a href="specialoffers.html" > Special Offers  </a></li> -->
+						<li><a href="parisguide.html"> Paris Guide</a>
+						<li><a href="articles.html" >Articles</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<div class="banner banner-in">
+		<div class="container">
+			<h6><a href="index.html">HOME</a>/ <span>Paris guide</span></h6>
+		</div>
+	</div>	
+		<!---->
+		<div class="container">
+		<div class="single">
+		{% load endless %}
+		{% paginate data %}
+		{% for post, images, categories in data %}
+        
+
+			<div class="single-middle">
+						<div class="col-md-7 need" >
+						    {% for image in images|slice:":1" %}
+						    <img class="img-responsive" src="{{ image.largeimage }}" alt="">
+						    {% endfor %}
+						</div>
+						<div class="col-md-5 tag" >
+							<div class="social-in services" style="padding:0">
+							    <h3 style="text-align:left"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+								<div class="col-md-4 date">
+									<p>Date <span>{{ post.pub_date }}</span></p>
+								</div>
+								<div class="col-md-8 date">
+									<p>Tags<span>
+								     {% for category in categories %}
+								           | <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+								      {% endfor %}
+								     </span></p>
+								</div>
+							</div>
+							<div class="tag-in"><br>{{post.body|safe|truncatewords:"90"|linebreaks}}
+							<a href="{{ post.get_absolute_url }}"><font color="blue">Read more</font></a>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+		{% endfor %}
+		{% show_pages %}
+		
+			</div>
+			</div>
+{% endblock %}	

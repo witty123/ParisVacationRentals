@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block title %}<title>{{ post.meta_title }}</title>{% endblock %}
+{% block meta %}
+<meta name="description" content="{{ post.meta_description }}" />
+<meta name="keywords" content="{{ post.meta_keywords }}" />
+<link rel="canonical" href="{{ post.meta_canonical }}" />
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
+{% block body %}
+<!--header-->
+	<div class="header">
+		<div class="container">	
+			<div class="logo">
+				<a href="index.html"><img src="static/img/log.png" alt="Paris Vacation Rentals"></a>
+			</div>
+				<div class="top-nav">
+					<span class="menu"><img src="static/img/menu.png" alt="Menu" ></span>
+					<ul>
+						<li  ><a href="wheretostay.html">Where to stay</a></li>
+                        <li><a href="story.html" > About us</a></li>
+			<!--  		<li><a href="specialoffers.html" > Special Offers  </a></li> -->
+				        <li><a href="parisguide.html"> Paris Guide</a>
+						<li><a href="articles.html" >Articles</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="banner banner-in">
+		<div class="container">
+			<h6><a href="index.html">HOME</a> / <span>{{ post.title }}</span></h6>
+		</div>
+	</div>
+<div class="container">
+			<div class="services">
+					<h3 style="text-align:left">{{ post.title }}</h3>
+					
+		        <div class="col-md-8 tag tags" >
+							<div class="social-in">
+								<div class="col-md-4 col-xs-12 date">
+									<p>Date <span>{{ post.updated_date }}</span></p>
+								</div>
+								<div class="col-md-4 col-xs-12 date">
+								    <p>Tags<span>
+								     {% for category in categories %}
+								           | <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+								      {% endfor %}
+								     </span></p>
+								</div>
+								<div class="col-md-4 col-xs-12 social-tag">
+						        <div class="fb-share-button col-md-3 col-xs-3 social-button" data-href="{{post.get_absolute_url}}" data-layout="button"></div>
+								<div class="col-md-3 col-xs-3 social-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+							    <div class="col-md-3 col-xs-3 social-button"><!-- Place this tag where you want the share button to render. -->
+								<div class="g-plus" data-action="share" data-annotation="none"></div>
+								
+								<!-- Place this tag after the last share tag. -->
+								<script type="text/javascript">
+								  (function() {
+								    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+								    po.src = 'https://apis.google.com/js/platform.js';
+								    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+								  })();
+								</script></div>
+								<div class="col-md-3 col-xs-3 social-button"> <a href="https://www.pinterest.com/pin/create/button/
+						        ?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F
+						        &media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg
+						        &description=Next%20stop%3A%20Pinterest"
+								        data-pin-do="buttonPin"
+								        data-pin-config="above">
+								        <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
+								    </a><script type="text/javascript">
+									(function(d){
+									    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+									    p.type = 'text/javascript';
+									    p.async = true;
+									    p.src = '//assets.pinterest.com/js/pinit.js';
+									    f.parentNode.insertBefore(p, f);
+									}(document));
+									</script></div>
+							    </div>
+								<div class="clearfix"> </div>
+							</div>
+					</div>	
+</div>
+</div>
+<div class="container">
+			<div class="services col-lg-8 col-xs-10 article tag-in" >
+               <p >{{ post.body|safe }}</p>     
+               <br>
+</div>
+<div class="form-1 comments-area col-xs-12  col-lg-offset-1 col-lg-3 " >
+		    <h2 class="content-mid ">Have a Query ?</h2>
+		     <form method="post" action={{ request.path }} >
+					    {% csrf_token %}
+					    {{ form.non_field_errors }}
+						     <div>
+					     <span>
+						    	{{ form.smallname.errors }}
+                                <label for="{{ form.subject.smallname }}">Name:</label>
+                                {{ form.smallname }}
+                         </span>
+				         </div>
+						 <div>
+						 <span>
+						    	 {{ form.smallemail.errors }}
+                                 <label for="{{ form.message.smallemail }}">Email:</label>
+                                  {{ form.smallemail }}
+						 </span>
+						 </div>
+						 <div>
+						 <span>
+						    	{{ form.subject.errors }}
+                                <label for="{{ form.sender.subject }}">Subject:</label>
+                                {{ form.subject }}
+						 </span>
+						 </div>
+						 <div>
+						 <span>
+						 <div class="sub-in">
+						 <input type="submit" value="Submit">
+						 </div>
+						 </span>
+						 </div>
+					     </form>
+		     </div>
+</div>
+<div class="container">
+				<div class="content-bottom">
+				<h3>More articles</h3>
+					<div class="brand">
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick1url }}"><img class="img-responsive" src="{{ post.quick1_image }}" alt="">
+							<p>{{ post.quick1_title }}<i> </i></p></a>
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick2url }}"><img class="img-responsive" src="{{ post.quick2_image }}" alt="">
+							<p>{{ post.quick2_title }}<i> </i></p></a>
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick3url }}"><img class="img-responsive" src="{{ post.quick3_image }}" alt="">
+							<p>{{ post.quick3_title }}<i> </i></p></a>
+							
+						</div>
+						<div class="col-md-3 fashion"> 
+							<a href="{{ quick4url }}"><img class="img-responsive" src="{{ post.quick4_image }}" alt="">
+							<p>{{ post.quick4_title }}<i> </i></p></a>
+						</div>
+							<div class="clearfix"> </div>
+						</div>
+				
+				</div>
+			</div>
+<div class="clearfix"></div>
+{% endblock %}

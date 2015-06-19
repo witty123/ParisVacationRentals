@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}<title>Thanks</title>{% endblock %}
+{% block meta %}
+<meta name="keywords" content="paris vacation rentals, apartments in paris to rent, holiday to paris, holiday homes in paris, vacation rental in paris, holiday rentals in paris"" />
+{% endblock %}
+{% block body %}
+<!--header-->
+	<div class="header">
+		<div class="container">	
+			<div class="logo">
+				<a href="index.html"><img src="static/img/log.png" alt="Paris Vacation Rentals"></a>
+			</div>
+				<div class="top-nav">
+					<span class="menu"><img src="static/img/menu.png" alt="Menu" ></span>
+					<ul>
+						<li><a href="wheretostay.html" >Where to stay</a></li>
+						<li><a href="story.html" > About us</a></li>
+			<!--  		<li><a href="specialoffers.html" > Special Offers  </a></li> -->
+                        <li><a href="parisguide.html"> Paris Guide</a>
+						<li><a href="articles.html" > Articles </a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	<div class="banner banner-in">
+		<div class="container">
+			<h6><a href="index.html">HOME</a> / <span>Thanks</span></h6>
+		</div>
+	</div>	
+		<!---->
+		
+			<div class="container">
+			<div class="four">
+				<h2>Thanks</h2>
+				<h3>We will get back to you.</h3>
+				<a href="index.html" class="back">Go Back </a>
+			</div>
+			</div>
+{% endblock %}
+				
