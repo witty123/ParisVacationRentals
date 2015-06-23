@@ -3,9 +3,11 @@ from django.http import HttpResponseRedirect
 from .models import Categories, Post, Index_quick_links
 from forms import ContactForm, EnquiryForm, contactform
 from mfabrik.zoho.crm import CRM
+from mfabrik.zoho.core import ZohoException
 import datetime
 
-# crm = CRM(username="adrian@ratedapartments.com", password="ratedrocks2014", apikey="c5e226a5dabe938839005601a94844eb")
+crm = CRM(authtoken="c5e226a5dabe938839005601a94844eb", scope="crmapi")
+# crm = CRM(username="adrian@ratedapartments.com", password="ratedrocks2014", apikey="c5e226a5dabe938839005601a94844eb", scope="crmapi")
 # crm.open()
 
 # recipient = ['reservations@houseofmoli.com']
@@ -28,15 +30,15 @@ def index(request):
 #             process the data in form.cleaned_data as required
 #             ...
 #             redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Phone": form.cleaned_data['contact'],
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
+            lead = {
+                u"Last Name": name,
+                u"Email": sender,
+                u"Phone": form.cleaned_data['contact'],
+                u"Source": u"PVR",
+                u"Description": subject,
+                u"Query Date": datetime.date.today
+            }
+            responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = EnquiryForm()
