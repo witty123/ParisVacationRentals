@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     #'tinymce',
     'ckeditor',
     'wtforms',
-    'endless_pagination'
+    'endless_pagination',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -74,7 +74,7 @@ TEMPLATE_DIRS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates'),TEMPLATES_PATH],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), TEMPLATES_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,6 +95,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
+    "django.core.context_processors.static",
 )
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -121,12 +122,13 @@ USE_L10N = True
 USE_TZ = True
 
 CKEDITOR_CONFIGS = {
-'default': {
-'toolbar': 'full',
-'height': 300,
-'width': 1000,
-},
-}
+                    'default': 
+                    {            
+                    'toolbar': 'full',
+                    'height': 300,
+                    'width': 1000,
+                    },
+                    }
 
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
@@ -134,8 +136,15 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '\Users/admin/workspace/mysite/static/root'
-MEDIA_ROOT = os.path.join(BASE_DIR,'uploads')
-MEDIA_URL= '/media/'
-CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR,'uploads')
+STATIC_ROOT = os.path.join('static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'uploads')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Email configuration
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'ratedapartments'
+EMAIL_HOST_PASSWORD = 'sendrated_1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

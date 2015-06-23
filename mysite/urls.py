@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -34,4 +35,5 @@ urlpatterns = [
                url(r'^ckeditor/', include('ckeditor.urls')), 
                url(r'^category/(?P<slug>[^\.]+).html', 'polls.views.view_categories', name='view_categories'), 
                url(r'(?P<slug>[^\.]+).html','polls.views.view_post', name='view_post'),
-]
+               
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

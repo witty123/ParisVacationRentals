@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 {% block title %}<title>Where to stay in Paris</title>{% endblock %}
 {% block meta %}
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,10 +12,10 @@
 	<div class="header">
 		<div class="container">	
 			<div class="logo">
-				<a href="index.html"><img src="static/img/log.png" alt="Paris Vacation Rentals"></a>
+				<a href="index.html"><img src="{% static "img/log.png" %}" alt="Paris Vacation Rentals"></a>
 			</div>
 				<div class="top-nav">
-					<span class="menu"><img src="static/img/menu.png" alt="Menu" ></span>
+					<span class="menu"><img src="{% static "img/menu.png" %}" alt="Menu" ></span>
 					<ul>
 						<li  ><a href="wheretostay.html">Where to stay</a></li>
 						<li><a href="story.html" > About us</a></li>
@@ -46,7 +47,7 @@
 					<div class="grid-top-top">
 						
 							<div class="col-md-4 service-grid">
-							 	<a href="articles.html"><img class="img-responsive "  src="static/img/app1.jpg" alt="" /></a>
+							 	<a href="articles.html"><img class="img-responsive "  src="{% static "img/app1.jpg" %}" alt="" /></a>
 							 </div>
 							 <div class="col-md-8 top-grid-right">
 								 <h4>Paris - The city of Lights..</h4>
@@ -63,7 +64,7 @@
 								 <p>These warm and welcoming apartments are more than just the quintessential place to stay. Whether in Montmarte, Marais, Montparnasse or Saint Germain Des Pres, these apartments come with a comfortable and cosy vibe. The decoration is stunning with very original, aesthetic touches; the furniture and other accessories are impressive and the service is simply impeccable. With a large living room, spacious bedrooms and open plan kitchen, space is never really a concern. These perfect budget hideouts are fitted with all the latest electronic equipments and high-end appliances, thus making your stay in Paris extremely comfortable.</p>
 							</div>
 							<div class="col-md-4 service-grid">
-							 	<a href="articles.html"><img class="img-responsive "  src="static/img/app.jpg" alt="" /></a>
+							 	<a href="articles.html"><img class="img-responsive "  src="{% static "img/app.jpg" %}" alt="" /></a>
 							 </div>
 							<div class="clearfix"> </div>
 					</div>

@@ -2,13 +2,15 @@ from django.shortcuts import get_object_or_404, render, render_to_response
 from django.http import HttpResponseRedirect
 from .models import Categories, Post, Index_quick_links
 from forms import ContactForm, EnquiryForm, contactform
-# from djangorocks.blog.models import Blog, Category
-# from django.shortcuts import render_to_response, get_object_or_404
-# def detail(request, item_id):
-#     p = get_object_or_404(producto, pk=item_id)
-#     pictures = picture.objects.filter(producto_id = item_id)
-#     return render_to_response('detail.html', {'item': p, 'photos': pictures
-# })
+from mfabrik.zoho.crm import CRM
+import datetime
+
+# crm = CRM(username="adrian@ratedapartments.com", password="ratedrocks2014", apikey="c5e226a5dabe938839005601a94844eb")
+# crm.open()
+
+# recipient = ['reservations@houseofmoli.com']
+
+recipient = ['warunhasija@gmail.com']
 
 
 def index(request):
@@ -17,14 +19,24 @@ def index(request):
         form = EnquiryForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-#             subject = form.cleaned_data['subject']
-#             sender = form.cleaned_data['email']
-#             recipients = ['warunhasija@gmail.com']
-#             from django.core.mail import send_mail
-#             send_mail('pvr', subject, sender, recipients)
+            name = form.cleaned_data['name']
+            subject = form.cleaned_data['query']
+            sender = form.cleaned_data['email']
+            recipients = recipient
+            from django.core.mail import send_mail
+            send_mail('Query through pvr', form.cleaned_data['contact'] + subject, sender, recipients)
 #             process the data in form.cleaned_data as required
 #             ...
 #             redirect to a new URL:
+#             lead = {
+#                 u"Last Name": name,
+#                 u"Email": sender,
+#                 u"Phone": form.cleaned_data['contact'],
+#                 u"Source": u"PVR",
+#                 u"Description": subject,
+#                 u"Query Date": datetime.date.today
+#             }
+#             responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = EnquiryForm()
@@ -89,14 +101,23 @@ def contact(request):
         form = ContactForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-#             subject = form.cleaned_data['subject']
-#             sender = form.cleaned_data['email']
-#             recipients = ['warunhasija@gmail.com']
-#             from django.core.mail import send_mail
-#             send_mail('pvr' ,subject, sender, recipients)
+            name = form.cleaned_data['name']
+            subject = form.cleaned_data['subject']
+            sender = form.cleaned_data['email']
+            recipients = recipient
+            from django.core.mail import send_mail
+            send_mail('Query through pvr', subject, sender, recipients)
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
+#             lead = {
+#                 u"Last Name": name,
+#                 u"Email": sender,
+#                 u"Source": u"PVR",
+#                 u"Description": subject,
+#                 u"Query Date": datetime.date.today
+#             }
+#             responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = ContactForm()
@@ -110,15 +131,24 @@ def view_post(request, slug):
         form = contactform(request.POST)
         # check whether it's valid:
         if form.is_valid():
-#             subject = form.cleaned_data['subject']
-#             sender = form.cleaned_data['email']
-#             recipients = ['warunhasija@gmail.com']
-#             from django.core.mail import send_mail
-#             send_mail('pvr' ,subject, sender, recipients)
+            name = form.cleaned_data['name']
+            subject = form.cleaned_data['subject']
+            sender = form.cleaned_data['email']
+            recipients = recipient
+            from django.core.mail import send_mail
+            send_mail('Query through pvr', subject, sender, recipients)
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('thanks.html')
+#             lead = {
+#                 u"Last Name": name,
+#                 u"Email": sender,
+#                 u"Source": u"PVR",
+#                 u"Description": subject,
+#                 u"Query Date": datetime.date.today
+#             }
+#             responses = crm.insert_records('Leads', [lead])
+#             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = contactform()
     post = get_object_or_404(Post, slug=slug)
