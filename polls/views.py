@@ -112,14 +112,14 @@ def contact(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
+            lead = {
+                u"Last Name": name,
+                u"Email": sender,
+                u"Source": u"PVR",
+                u"Description": subject,
+                u"Query Date": datetime.date.today
+            }
+            responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = ContactForm()
@@ -142,15 +142,15 @@ def view_post(request, slug):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
-#             return HttpResponseRedirect('thanks.html')
+            lead = {
+                u"Last Name": name,
+                u"Email": sender,
+                u"Source": u"PVR",
+                u"Description": subject,
+                u"Query Date": datetime.date.today
+            }
+            responses = crm.insert_records('Leads', [lead])
+            return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = contactform()
     post = get_object_or_404(Post, slug=slug)
