@@ -10,9 +10,9 @@ crm = CRM(authtoken="c5e226a5dabe938839005601a94844eb", scope="crmapi")
 # crm = CRM(username="adrian@ratedapartments.com", password="ratedrocks2014", apikey="c5e226a5dabe938839005601a94844eb", scope="crmapi")
 # crm.open()
 
-# recipient = ['reservations@houseofmoli.com']
+recipient = ['reservations@houseofmoli.com']
 
-recipient = ['warunhasija@gmail.com']
+#recipient = ['warunhasija@gmail.com']
 
 
 def index(request):

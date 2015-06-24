@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    #'grappelli.dashboard',
-    #'grappelli',
-    #'filebrowser',
+#     'grappelli.dashboard',
+#     'grappelli',
+#     'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,13 +121,13 @@ USE_L10N = True
 USE_TZ = True
 
 CKEDITOR_CONFIGS = {
-                    'default': 
+                    'default':
                     {
-                    'toolbar': 'full',
-                    'height': 300,
-                    'width': 1000,
+                        'toolbar': 'full',
+                        'height': 300,
+                        'width': 1000,
                     },
-                    }
+                }
 
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
