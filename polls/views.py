@@ -5,12 +5,12 @@ from forms import ContactForm, EnquiryForm, contactform
 from mfabrik.zoho.crm import CRM
 import datetime
 
-# crm = CRM(username="adrian@ratedapartments.com", password="ratedrocks2014", apikey="c5e226a5dabe938839005601a94844eb")
+crm = CRM(authtoken="c5e226a5dabe938839005601a94844eb",scope="crmapi")
 # crm.open()
 
-# recipient = ['reservations@houseofmoli.com']
+recipient = ['reservations@houseofmoli.com','']
 
-recipient = ['warunhasija@gmail.com']
+#recipient = ['warunhasija@gmail.com']
 
 
 def index(request):
@@ -24,19 +24,19 @@ def index(request):
             sender = form.cleaned_data['email']
             recipients = recipient
             from django.core.mail import send_mail
-            send_mail('Query through pvr', form.cleaned_data['contact'] + subject, sender, recipients)
+            send_mail('Query through pvr', form.cleaned_data['contact'] + subject, sender, recipients,fail_silently=False)
 #             process the data in form.cleaned_data as required
 #             ...
 #             redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Phone": form.cleaned_data['contact'],
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
+             lead = {
+                 u"Last Name": name,
+                 u"Email": sender,
+                 u"Phone": form.cleaned_data['contact'],
+                 u"Source": u"PVR",
+                 u"Description": subject,
+                 u"Query Date": datetime.date.today
+             }
+             responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = EnquiryForm()
@@ -110,14 +110,14 @@ def contact(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
+             lead = {
+                 u"Last Name": name,
+                 u"Email": sender,
+                 u"Source": u"PVR",
+                 u"Description": subject,
+                 u"Query Date": datetime.date.today
+             }
+             responses = crm.insert_records('Leads', [lead])
             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = ContactForm()
@@ -140,15 +140,15 @@ def view_post(request, slug):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-#             lead = {
-#                 u"Last Name": name,
-#                 u"Email": sender,
-#                 u"Source": u"PVR",
-#                 u"Description": subject,
-#                 u"Query Date": datetime.date.today
-#             }
-#             responses = crm.insert_records('Leads', [lead])
-#             return HttpResponseRedirect('thanks.html')
+             lead = {
+                 u"Last Name": name,
+                 u"Email": sender,
+                 u"Source": u"PVR",
+                 u"Description": subject,
+                 u"Query Date": datetime.date.today
+             }
+             responses = crm.insert_records('Leads', [lead])
+             return HttpResponseRedirect('thanks.html')
     elif request.method == 'GET':
         form = contactform()
     post = get_object_or_404(Post, slug=slug)

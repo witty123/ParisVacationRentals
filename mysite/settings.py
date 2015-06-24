@@ -32,8 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    #'grappelli.dashboard',
-    #'grappelli',
+#    'grappelli.dashboard',
+#    'grappelli',
     #'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'wtforms',
     'endless_pagination',
+    'gunicorn'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -140,9 +141,11 @@ STATIC_ROOT = os.path.join('static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'uploads')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'ratedapartments'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'ratedapartments'
 EMAIL_HOST_PASSWORD = 'sendrated_1'
