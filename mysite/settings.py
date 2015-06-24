@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-#    'grappelli.dashboard',
-#    'grappelli',
-    #'filebrowser',
+#     'grappelli.dashboard',
+#     'grappelli',
+#     'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,13 +122,13 @@ USE_L10N = True
 USE_TZ = True
 
 CKEDITOR_CONFIGS = {
-                    'default': 
+                    'default':
                     {
-                    'toolbar': 'full',
-                    'height': 300,
-                    'width': 1000,
+                        'toolbar': 'full',
+                        'height': 300,
+                        'width': 1000,
                     },
-                    }
+                }
 
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
@@ -144,16 +144,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-<<<<<<< HEAD
-DEFAULT_FROM_EMAIL = 'ratedapartments'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'ratedapartments'
-EMAIL_HOST_PASSWORD = 'sendrated_1'
-EMAIL_PORT = 587
-=======
 DEFAULT_FROM_EMAIL = u'ratedapartments'
 SERVER_EMAIL = u'ratedapartments'
->>>>>>> 23057451fc00f338e5403ade0e6d4dec5ac2bbbf
 EMAIL_USE_TLS = True
 EMAIL_HOST = u'smtp.sendgrid.net'
 EMAIL_HOST_USER = u'ratedapartments'
