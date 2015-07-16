@@ -71,9 +71,9 @@ class Post_related_images(models.Model):
 #         ins=ImageOps()
     # pull a few variables out of that full path
         extension = photopath.rsplit('.', 1)[1]  # the file extension
-        filename = photopath.rsplit('\\', 1)[-1].rsplit('.', 1)[:-1][0]  # the
+        filename = photopath.rsplit('/', 1)[-1].rsplit('.', 1)[:-1][0]  # the
         # file name only (minus path or extension)
-        fullpath = photopath.rsplit('\\', 1)[:-1][0]  # the path only (minus
+        fullpath = photopath.rsplit('/', 1)[:-1][0]  # the path only (minus
         # the filename.extension)
         # use the file extension to determine if the image is valid
         # before proceeding

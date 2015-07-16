@@ -1,0 +1,551 @@
+    1  apt-get install git 
+    2  sudo apt-get install git 
+    3  sudo apt-get install python
+    4  sudo apt-get install django
+    5  sudo apt-get install python-django
+    6  python --version
+    7  sudo apt-get install pip
+    8  sudo apt-get install python-pip
+    9  sudo apt-get update pyhton-pip
+   10  sudo apt-get update
+   11  sudo apt-get install python-pip
+   12  exit
+   13  pip install git
+   14  mkdir mysite
+   15  cd mysite
+   16  git init
+   17  git clone https://github.com/witty123/ParisVacationRentals
+   18  pip install requirements.txt
+   19  pip install -r requirements.txt
+   20  ls
+   21  cd ParisVacationRentals
+   22  ls
+   23  pip install -r requirements.txt
+   24  sudo apt-get install libpq-dev
+   25  pip install -r requirements.txt
+   26  [Errno 13] Permission denied: '/usr/local/lib/python2.7/dist-packages/d   j_database_url-0.3.0.dist-info'
+   27  python manage.py runserver
+   28  pip install django-endless-pagination
+   29  python manage.py runserver
+   30  sudo pip install django-endless-pagination
+   31  python manage.py runserver
+   32  sudo pip install django-wtforms
+   33  sudo pip install WTForms-django
+   34  python manage.py runserver
+   35  sudo pip install -r requirements.txt
+   36  python manage.py runserver
+   37  sudo pip install Pillow
+   38  python manage.py runserver
+   39  sudo pip install Pillow
+   40  sudo apt-get install build-essential autoconf libtool pkg-config python-openg1 python-imaging python-pyrex python-pyside.qtopeng1 idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
+   41  sudo apt-get install build-essential autoconf libtool pkg-config python-imaging python-pyrex python-pyside.qtopeng1 idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
+   42  sudo apt-get install build-essential autoconf libtool pkg-config python-imaging python-pyrex idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev
+   43  sudo apt-get install python-dev
+   44  sudo apt-get install gcc
+   45  sudo apt-get install python-dateutil python-docutils python-feedparser python-gdata python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psycopg2 python-psutil python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi
+   46  sudo apt-get install libxml2-dev
+   47  sudo apt-get install libxslt1-dev
+   48  pip install Pillow
+   49  python manage.py runserver
+   50  python manage.py runserver r ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+   51  python manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+   52  pip install gunicorn
+   53  sudo pip install gunicorn
+   54  sudo pip install greenlet
+   55  sudo pip install eventlet
+   56  sudo pip install gevent
+   57  sudo ept-get install gunicorn
+   58  sudo apt-get install gunicorn
+   59  ls
+   60  gunicorn mysite.wsgi
+   61  ls
+   62  vim start_gunicorn.sh
+   63  chmod +x start_gunicorn.sh
+   64  ls
+   65  cd mysite
+   66  ls
+   67  cd..
+   68  cd /mysite/ParisVacationentals
+   69  cd mysite
+   70  pwd
+   71  cd
+   72  cd mysite
+   73  cd ParisVacationRentals
+   74  ls
+   75  sudo apt-get install nginx
+   76  sudo service nginx start
+   77  sudo service nginx stop
+   78  sudo vim /etc/niginx/nginx.conf
+   79  ls
+   80  cd mysite
+   81  ls
+   82  cd ParisVacationRentals
+   83  gunicorn --bind ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000 mysite.wsgi:application
+   84  vi start_gunicorn.sh
+   85  ls
+   86  sudo pip install --upgrade virtualenv
+   87  cd /usr/local
+   88  cd
+   89  ls
+   90  sudo vi /etc/nginx/sites-enabled/default
+   91  sudo vim /etc/nginx/nginx.conf
+   92  sudo vi /etc/nginx/sites-enabled/default
+   93  sudo /etc/init.d/nginx start
+   94  cd mysite
+   95  cd ParisVacationRentals
+   96  vim start_gunicorn.sh
+   97  chmod +x start_gunicorn.sh
+   98  ./start_gunicorn.sh
+   99  vim start_gunicorn.sh
+  100  chmod +x start_gunicorn.sh
+  101  ./start_gunicorn.sh
+  102  bash start_gunicorn.sh
+  103  sudo /etc/init.d/nginx start
+  104  sudo service nginx start
+  105  sudo vi /etc/nginx/sites-enabled/default
+  106  sudo service nginx start
+  107  bash start_gunicorn.sh
+  108  ./start_gunicorn.sh
+  109  vim start_gunicorn.sh
+  110  ./start_gunicorn.sh
+  111  sudo vi /etc/nginx/sites-enabled/default
+  112  vim start_gunicorn.sh
+  113  sudo service nginx start
+  114  ./start_gunicorn.sh
+  115  vim start_gunicorn.sh
+  116  sudo vi /etc/nginx/sites-enabled/default
+  117  sudo /etc/init.d/nginx start
+  118  ./start_gunicorn.sh
+  119  vim start_gunicorn.sh
+  120  sudo vi /etc/nginx/sites-enabled/default
+  121  sudo /home/ubuntu/mysite/ParisVacationRentals/mysite.error.log
+  122  vi /home/ubuntu/mysite/ParisVacationRentals/mysite.error.log
+  123  sudo vi /etc/nginx/sites-enabled/default
+  124  vim start_gunicorn.sh
+  125  sudo vim /etc/nginx/nginx.conf
+  126  sudo vi /etc/nginx/sites-enabled/default
+  127  cd static
+  128  ls
+  129  cd
+  130  cd mysite/ParisVacationRentals
+  131  cd mysite
+  132  vi settings
+  133  vim settings
+  134  vim settings.py
+  135  exit
+  136  ls
+  137  cd mysite
+  138  ls
+  139  sudo chown .
+  140  sudo chown . . 
+  141  ./start_gunicorn.sh
+  142  nginx -s start
+  143  sudo /etc/init.d/nginx start
+  144  vim start_gunicorn.sh
+  145  gunicorn_django --bind=127.0.0.1:8000
+  146  gunicorn_django --bind=127.0.0.0:8000
+  147  ../bin/gunicorn_django --bind=127.0.0.0:8000
+  148  bash start_gunicorn.sh
+  149  gunicorn_django --bind=127.0.0.0:8000
+  150  gunicorn mysite:application -b 127.0.0.0:8000
+  151  ls
+  152  cd mysite
+  153  ls
+  154  cd ..
+  155  gunicorn --log-file=- mysite.wsgi:application
+  156  vim start_gunicorn.sh
+  157  gunicorn --log-file=- mysite.wsgi:application
+  158  gunicorn_django --bind=127.0.0.0:8000
+  159  ./start_gunicorn.sh
+  160  /etc/init/gunicorn.conf
+  161  sudo vim /etc/init/gunicorn.conf
+  162  cd /etc/init
+  163  ls
+  164  cd ..
+  165  cd mysite
+  166  cd /home
+  167  cd ubuntu
+  168  cd mysite
+  169  ls
+  170  cd mysite
+  171  ls
+  172  vim settings.py
+  173  cd ..
+  174  chmod 777 . 
+  175  ./start_gunicorn.sh
+  176  vim gunicorn-error.log
+  177  vim gunicorn.log
+  178  sudo pip install gunicorn
+  179  sudo pip install nginx
+  180  vim start_gunicorn.sh
+  181  gunicorn_django --bind=127.0.0.1:8002
+  182  manage.py runserver
+  183  ls
+  184  vim manage.py
+  185  manage.py runserver
+  186  sudo manage.py runserver
+  187  python  manage.py runserver
+  188  python  manage.py runserver 127.0.0.0:800
+  189  python  manage.py runserver 127.0.0.0:8000
+  190  python  manage.py runserver 127.0.0.0:8002
+  191  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8002
+  192  vim db.sqlite3
+  193  git init
+  194  cd mysite
+  195  vim settings.py
+  196  cd ..
+  197  ./start_gunicorn.sh
+  198  gunicorn_django --bind=127.0.0.1:8002
+  199  gunicorn_django --bind=127.0.0.1:8001
+  200  gunicorn_django --bind ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8002
+  201  gunicorn_django --bind ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8001
+  202  gunicorn_django --preload --bind ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8001
+  203  gunicorn mysite.wsgi:application
+  204  netstat -tulpn
+  205  -kill -9 18653/python
+  206  pkill -9 18653/python
+  207  netstat -tulpn
+  208  ps ax|grep gunicorn
+  209  kill 18653
+  210  ps ax|grep gunicorn
+  211  sudo kill 20679
+  212  ps ax|grep gunicorn
+  213  sudo kill 18653
+  214  ps ax|grep gunicorn
+  215  sudo kill 20620
+  216  ps ax|grep gunicorn
+  217  sudo kill 20694
+  218  ps ax|grep gunicorn
+  219  sudo kill 20690
+  220  sudo kill 20619
+  221  sudo kill 20616
+  222  sudo kill 20611
+  223  sudo kill 20368
+  224  sudo kill 20364
+  225  sudo kill 20359
+  226  ps ax|grep gunicorn
+  227  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  228  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8002
+  229  ps ax|grep 
+  230  ps ax|grep python
+  231  sudo kill 18731
+  232  ps ax|grep python
+  233  cd ..
+  234  sudo reboot
+  235  ps ax|grep python
+  236  ls
+  237  ls
+  238  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  239  sudo easy_install mfabrik.zoho
+  240  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  241  ls
+  242  cd mysite
+  243  ls
+  244  cd ..
+  245  ls
+  246  cd polls
+  247  cd templates
+  248  ls
+  249  vim index.html
+  250  cd ..
+  251  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  252  cd polls
+  253  cd templates
+  254  vim index.html
+  255  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  256  cd ..
+  257  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000
+  258  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000 --insecure
+  259  ps ax|grep python
+  260  sudo kill 1385
+  261  sudo kill 1374
+  262  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000 --insecure
+  263  ps ax|grep python
+  264  sudo kill 1374
+  265  ps ax|grep python
+  266  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8001 --insecure
+  267  ps ax|grep python
+  268  sudo kill 1385
+  269  ps ax|grep python
+  270  sudo kill -9 1385
+  271  ps ax|grep python
+  272  sudo kill -9 1374
+  273  ps ax|grep python
+  274  python  manage.py runserver ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000 --insecure
+  275  ps ax|grep python
+  276  ls
+  277  vim start_gunicorn.sh
+  278  ./start_gunicorn.sh
+  279  ps ax|grep python
+  280  sudo kill -9 1602
+  281  sudo kill -9 1607
+  282  sudo kill -9 1610
+  283  sudo kill -9 1611
+  284  ps ax|grep python
+  285  vim start_gunicorn.sh
+  286  cd mysite
+  287  vim settings.py
+  288  cd ..
+  289  cd /etc
+  290  ls
+  291  cd gunicorn
+  292  cd gunicorn.d
+  293  ls
+  294  vim django.example
+  295  ls
+  296  vim wsgi.example
+  297  gunicorn --check-config APP_MODULE
+  298  gunicorn --check-config POLLS
+  299  cd ..
+  300  cd home
+  301  cd ubuntu
+  302  cd mysite
+  303  gunicorn --check-config POLls
+  304  gunicorn --check-config POLLS
+  305  gunicorn --check-config APP_MODULE
+  306  GUNICORN -H
+  307  gunicorn -h
+  308  gunicorn --check-config mysite.wsgi:application
+  309  gunicorn --workers=2 mysite.wsgi:application
+  310  ls
+  311  ps ax|grep python
+  312  sudo kill -9 1659
+  313  sudo kill -9 1664
+  314  sudo kill -9 1665
+  315  ps ax|grep python
+  316  gunicorn --env DJANGO_SETTINGS_MODULE=mysite.settings  mysite.wsgi:application
+  317  ps ax|grep python
+  318  sudo service nginx start
+  319  gunicorn -b ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000  mysite.wsgi:application
+  320  vim start_gunicorn.sh
+  321  ./start_gunicorn.sh
+  322  sudo vi /etc/nginx/sites-enabled/default
+  323  sudo service nginx start
+  324  sudo vi /etc/nginx/sites-enabled/default
+  325  sudo service nginx start
+  326  sudo vi /etc/nginx/sites-enabled/default
+  327  sudo service nginx start
+  328  sudo service nginx stop
+  329  sudo service nginx start
+  330  sudo vi /etc/nginx/sites-enabled/default
+  331  sudo service nginx restart
+  332  sudo service nginx stop
+  333  sudo service nginx start
+  334  sudo service nginx stop
+  335  sudo vim /etc/init/gunicorn.conf
+  336  sudo service gunicorn start
+  337  sudo vi /etc/nginx/sites-enabled/default
+  338  sudo nginx -t
+  339  sudo vi /etc/nginx/nginx.conf
+  340  sudo nginx -t
+  341  sudo service nginx restart
+  342  sudo vi /etc/nginx/nginx.conf
+  343  sudo nginx -t
+  344  sudo service nginx restart
+  345  sudo vi /etc/nginx/nginx.conf
+  346  sudo nginx -t
+  347  sudo vi /etc/nginx/nginx.conf
+  348  sudo nginx -t
+  349  sudo vi /etc/nginx/sites-enabled/default
+  350  sudo nginx -t
+  351  nginx -t
+  352  sudo nginx -t
+  353  sudo vi /etc/nginx/sites-enabled/default
+  354  sudo nginx -t
+  355  sudo vi /etc/nginx/sites-enabled/default
+  356  sudo nginx -t
+  357  sudo vi /etc/nginx/sites-enabled/default
+  358  sudo nginx -t
+  359  sudo vi /etc/nginx/sites-enabled/default
+  360  sudo nginx -t
+  361  sudo vi /etc/nginx/sites-enabled/default
+  362  sudo nginx -t
+  363  sudo vi /etc/nginx/sites-enabled/default
+  364  sudo nginx -t
+  365  sudo service nginx restart
+  366  pip uninstall mfabrik.zoho
+  367  sudo pip uninstall mfabrik.zoho
+  368  ls
+  369  git clone https://github.com/miohtama/mfabrik.zoho
+  370  ls
+  371  cd mfabrik.zoho
+  372  sudo python setup.py install
+  373  cd ..
+  374  cd mysite
+  375  ls
+  376  cd mysite
+  377  ls
+  378  cd ..
+  379  cd polls
+  380  ls
+  381  sudo vim views.py
+  382  sudo service nginx restart
+  383  cd ..
+  384  ls
+  385  cd mysite
+  386  ls
+  387  cd settings.py
+  388  sudo vim settings.py
+  389  cd ..
+  390  ls
+  391  sudo python manage.py collectstatic
+  392  cd mysite
+  393  sudo vim settings.py
+  394  cd ..
+  395  sudo python manage.py collectstatic
+  396  cd mysite
+  397  sudo vim settings.py
+  398  cd ..
+  399  sudo python manage.py collectstatic
+  400  sudo service nginx restart
+  401  ls
+  402  cd mysite
+  403  ls
+  404  cd ..
+  405  cd polls
+  406  ls
+  407  cd views.py
+  408  sudo vim views.py
+  409  cd ..
+  410  git status
+  411  git add .
+  412  git commit -m "Final commit"
+  413  git push
+  414  git push master
+  415  git push https://github.com/witty123/ParisVacationRentals
+  416  git pull https://github.com/witty123/ParisVacationRentals
+  417  git add .
+  418  git commit -m "Commit from ec2" 
+  419  git push origin
+  420  git push -v https://github.com/witty123/ParisVacationRentals
+  421  git pull https://github.com/witty123/ParisVacationRentals
+  422  cd mysite
+  423  sudo vim settings.py
+  424  cd ..
+  425  cd polls
+  426  sudo vim view.py
+  427  ls
+  428  sudo vim views.py
+  429  d ..
+  430  cd ..
+  431  git add .
+  432  git commit -m "ec2 commit"
+  433  git push -v https://github.com/witty123/ParisVacationRentals
+  434  ls
+  435  cd mysite
+  436  ls
+  437  cd polls
+  438  ls
+  439  sudo vim models.py
+  440  vim start_gunicorn.sh
+  441  cd ..
+  442  sudo vim start_gunicorn.sh 
+  443  ./start_gunicorn.sh 
+  444  nginx -s reload
+  445  sudo nginx -s reload
+  446  cd polls
+  447  sudo vim models.py
+  448  sudo service nginx restart
+  449  ls
+  450  cd mysite/
+  451  ls
+  452  cd polls
+  453  ls
+  454  sudo vim models.py
+  455  cd ..
+  456  ls
+  457  cd uploads
+  458  ls
+  459  cd img
+  460  ls
+  461  cd 2015
+  462  ls
+  463  cd 07
+  464* lsuu
+  465  cd 15
+  466  ls
+  467  python
+  468  cd ..
+  469  cd
+  470  cd mysite
+  471  ls
+  472  cd polls
+  473  ls
+  474  sudo vim models.py
+  475  ls
+  476  cd ..
+  477  ls
+  478  sudo vim gunicorn.log
+  479  ls
+  480  cd polls
+  481  ls
+  482  sudo vim models.py
+  483  sudo service nginx restart
+  484  sudo vim models.py
+  485  sudo service nginx restart
+  486  sudo vim models.py
+  487  ls
+  488  cd ..
+  489  ls
+  490  wc-l gunicorn-error.log
+  491  wc -l gunicorn-error.log
+  492  wc -l mysite-error.log
+  493  head -n 100 mysite-error.log
+  494  tail -n 100 mysite-error.log
+  495  sudo service gunicorn stop
+  496  manage.py runserver
+  497  ls
+  498  python manage.py runserver
+  499  sudo service nginx stop
+  500  python manage.py runserver
+  501  python manage.py runserver 127.0.0.1:8001
+  502  python manage.py runserver http://ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8001/
+  503  python manage.py runserver http://ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8001
+  504  python manage.py runserver
+  505  python manage.py runserver localhost:8001
+  506  sudo service gunicorn start
+  507  sudo service nginx start
+  508  ps aux | grep gunicorn
+  509  sudo service gunicorn stop
+  510  ps aux | grep gunicorn
+  511  kill 1741
+  512  kill 1746
+  513  ps aux | grep gunicorn
+  514  clear
+  515  ps aux | grep nginx
+  516  sudo service nginx stop
+  517  clear
+  518  ps aux | grep nginx
+  519  python manage.py shell
+  520  sudo apt-get install ipython
+  521  python manage.py shell
+  522  ls
+  523  rm *.log 
+  524  ls
+  525  sudo service nginx start 
+  526  sudo service gunicorn start 
+  527  ls
+  528  sudo apt-get install vim
+  529  sudo apt-get install vi
+  530  histoty
+  531  history
+  532  gunicorn -b ec2-52-74-90-224.ap-southeast-1.compute.amazonaws.com:8000  mysite.wsgi:application
+  533  clear
+  534  ps aux | grep guniccorn
+  535  ps aux | grep gunicorn
+  536  ./start_gunicorn.sh 
+  537  ps aux | grep gunicorn
+  538  sudo service nginx start 
+  539  history
+  540  sudo /etc/init.d/nginx start
+  541  ps aux | grep nginx
+  542  vi gunicorn-error.log 
+  543  vi gunicorn.log 
+  544  vi mysite.log
+  545  vi mysite-error.log 
+  546  clear
+  547  ls
+  548  vi start_gunicorn.sh 
+  549  history | grep socket
+  550  history | grep sock
+  551  history > abc.txt
